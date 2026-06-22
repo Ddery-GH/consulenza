@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "consulenza-80654"
+  },
+  "targets": {
+    "consulenza-80654": {
+      "hosting": {
+        "enricodiprisco": [
+          "enricodiprisco"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

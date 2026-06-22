@@ -570,6 +570,56 @@ Prima di completare una modifica, verificare mentalmente:
 
 ---
 
+
+## Sicurezza, dati sensibili e frontend
+
+La sicurezza dei dati è una priorità assoluta.
+
+Non inserire mai nel frontend:
+
+- chiavi segrete;
+- password;
+- token privati;
+- credenziali;
+- API secret;
+- dati sensibili non necessari;
+- logiche di autorizzazione critiche;
+- controlli admin affidati solo al frontend;
+- dati personali hardcoded;
+- configurazioni private.
+
+Il frontend non deve mai essere considerato un ambiente sicuro. Qualsiasi dato presente nel frontend può essere letto, ispezionato o manipolato dall’utente tramite browser/devtools.
+
+Non basare mai la sicurezza solo su:
+
+- pulsanti nascosti;
+- route nascoste;
+- controlli JavaScript lato client;
+- ruoli salvati solo nel localStorage;
+- condizioni tipo `if (utente.admin)` senza verifica lato backend/regole;
+- dati nascosti nel codice;
+- campi disabilitati nel form.
+
+Quando verranno usati Firebase, Firestore, Auth o Storage, la protezione reale deve essere gestita tramite:
+
+- Firebase Authentication;
+- Firestore Security Rules;
+- Storage Security Rules;
+- validazione lato backend o regole server-side quando disponibili;
+- separazione chiara tra dati pubblici, dati utente e dati admin.
+
+Le informazioni sensibili devono essere salvate solo dove necessario e con accessi controllati.
+
+Nel codice frontend possono essere presenti solo variabili pubbliche necessarie al funzionamento dell’app, come le variabili `VITE_FIREBASE_*`, sapendo che queste non sono segreti veri e propri.
+
+Non committare mai file `.env` con valori reali.
+
+Se una richiesta implica esporre dati sensibili, credenziali o logiche riservate nel frontend, fermati e segnala il rischio prima di procedere.
+
+Per qualsiasi funzionalità che coinvolga dati personali, ruoli, admin, documenti, richieste clienti o informazioni riservate, progettare prima una strategia di sicurezza adeguata.
+
+---
+
 ## Cose vietate
 
 Non fare mai queste cose senza richiesta esplicita:
