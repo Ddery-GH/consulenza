@@ -683,8 +683,16 @@ Il comando deve eseguire:
 
 Il comando finale deve seguire questa struttura:
 
-```bash
-npm run build && git add . && git commit -m "MESSAGGIO_REALE_IN_ITALIANO" && git push && firebase deploy --only hosting:enricodiprisco
+Quando proponi il comando automatico per build, commit, push e deploy su Windows PowerShell, usa sempre questo formato:
+
+cmd /c 'npm run build && git add . && git commit -m "MESSAGGIO_COMMIT_IN_ITALIANO" && git push && firebase deploy --only hosting:enricodiprisco'
+
+Nel comando finale sostituisci sempre MESSAGGIO_COMMIT_IN_ITALIANO con una frase reale, breve, specifica e in italiano basata sulla modifica appena fatta. Non lasciare mai il placeholder.
+
+Esempio:
+cmd /c 'npm run build && git add . && git commit -m "Aggiorna titolo scheda browser in Enrico Di Prisco" && git push && firebase deploy --only hosting:enricodiprisco'
+
+Non usare mai && direttamente in PowerShell senza cmd /c.
 
 ---
 
