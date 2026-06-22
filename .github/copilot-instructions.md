@@ -663,6 +663,72 @@ Se la modifica coinvolge più file, spiegare l’ordine.
 
 ---
 
+## Azioni automatiche dopo modifiche al codice
+
+Dopo ogni modifica normale al frontend, se l’ambiente VS Code/Copilot Agent permette di proporre comandi nel terminale, Copilot deve proporre direttamente un comando unico per build, commit, push e deploy.
+
+Non limitarti a ricordare i comandi da eseguire manualmente.
+
+Non chiedere prima “Vuoi che esegua build, commit, push e deploy ora?”, perché in VS Code l’utente può già scegliere “Allow” o “Decline”.
+
+Copilot deve proporre il comando eseguibile nel terminale. L’utente deciderà tramite “Allow” o “Decline”.
+
+Il comando deve eseguire:
+
+1. build del progetto;
+2. aggiunta dei file modificati a Git;
+3. commit con messaggio in italiano;
+4. push su GitHub;
+5. deploy su Firebase Hosting.
+
+Il comando finale deve seguire questa struttura:
+
+```bash
+npm run build && git add . && git commit -m "MESSAGGIO_REALE_IN_ITALIANO" && git push && firebase deploy --only hosting:enricodiprisco
+
+---
+
+## Gestione errori durante build, commit, push e deploy
+
+Se il comando automatico fallisce durante `npm run build`, Copilot non deve fermarsi semplicemente dicendo che la build è fallita.
+
+Copilot deve:
+
+1. leggere attentamente l’errore mostrato nel terminale;
+2. identificare il file, la riga o la causa più probabile;
+3. spiegare brevemente il problema;
+4. proporre una correzione minima e mirata;
+5. modificare solo i file necessari;
+6. rilanciare la build dopo la correzione, se l’ambiente lo consente.
+
+La correzione deve rispettare sempre le regole principali del progetto:
+
+- non modificare file non coinvolti;
+- non fare refactor non richiesti;
+- non cambiare layout o logiche non collegate all’errore;
+- non installare librerie senza richiesta;
+- non cancellare codice funzionante;
+- non toccare `.env` o dati sensibili;
+- non cambiare configurazioni Firebase se l’errore non riguarda Firebase.
+
+Se l’errore riguarda import mancanti, variabili inutilizzate, JSX non valido, classi errate, componenti non definiti o sintassi JavaScript, risolvere con la modifica più piccola possibile.
+
+Se l’errore non è chiaro o può avere più cause, chiedere chiarimenti invece di tirare a indovinare.
+
+Se la build fallisce, non eseguire `git add`, `git commit`, `git push` o `firebase deploy`.
+
+Procedere con commit, push e deploy solo dopo che `npm run build` è completato con successo.
+
+Se il comando fallisce durante `git commit` perché non ci sono modifiche da committare, spiegare che non ci sono cambiamenti nuovi da salvare e non trattarlo come un errore grave.
+
+Se il comando fallisce durante `git push`, leggere l’errore e proporre una soluzione sicura. Non usare mai `git push --force` senza richiesta esplicita.
+
+Se il comando fallisce durante `firebase deploy`, leggere l’errore e proporre una soluzione mirata. Non modificare `firebase.json` o `.firebaserc` senza spiegare il motivo e senza conferma se la modifica è sensibile.
+
+Dopo aver corretto un errore di build, Copilot deve proporre di nuovo il comando completo aggiornato, con un messaggio commit in italiano coerente con le modifiche effettivamente fatte.
+
+---
+
 ## Principio guida finale
 
 Questo progetto deve crescere in modo ordinato, controllato e senza regressioni.
