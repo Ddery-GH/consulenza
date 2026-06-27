@@ -17,7 +17,7 @@ function VisualAstratto() {
           <div className="h-2 w-20 rounded-full bg-slate-200" />
         </div>
 
-        {/* SVG — mappa strategica astratta */}
+        {/* SVG — mappa hub sportivo */}
         <div className="relative h-52 w-full overflow-hidden rounded-xl border border-slate-200 bg-white">
           <svg
             viewBox="0 0 380 200"
@@ -88,7 +88,7 @@ function VisualAstratto() {
               strokeDasharray="4 5"
             />
 
-            {/* Nodo sinistro — Situazione */}
+            {/* Nodo sinistro — Ente sportivo */}
             <circle
               cx="60"
               cy="100"
@@ -107,10 +107,10 @@ function VisualAstratto() {
               fontFamily="system-ui, sans-serif"
               fontWeight="500"
             >
-              Situazione
+              Ente sportivo
             </text>
 
-            {/* Nodo centro-alto — Analisi */}
+            {/* Nodo centro-alto — RASD */}
             <circle
               cx="155"
               cy="55"
@@ -129,10 +129,10 @@ function VisualAstratto() {
               fontFamily="system-ui, sans-serif"
               fontWeight="600"
             >
-              Analisi
+              RASD
             </text>
 
-            {/* Nodo centro-basso — Strategia */}
+            {/* Nodo centro-basso — Normativa */}
             <circle
               cx="155"
               cy="145"
@@ -151,10 +151,10 @@ function VisualAstratto() {
               fontFamily="system-ui, sans-serif"
               fontWeight="500"
             >
-              Strategia
+              Normativa
             </text>
 
-            {/* Nodo destro — Soluzione */}
+            {/* Nodo destro — Gestione */}
             <circle cx="270" cy="100" r="28" fill="#1D4ED8" opacity="0.08" />
             <circle
               cx="270"
@@ -174,7 +174,7 @@ function VisualAstratto() {
               fontFamily="system-ui, sans-serif"
               fontWeight="700"
             >
-              Soluzione
+              Gestione
             </text>
 
             {/* Elementi decorativi angoli */}
@@ -239,21 +239,21 @@ function VisualAstratto() {
         {/* Metriche inferiori */}
         <div className="mt-5 grid grid-cols-3 gap-3">
           <div className="rounded-xl border border-slate-200 bg-white p-3 text-center">
-            <div className="text-xs font-medium text-slate-500">Analisi</div>
+            <div className="text-xs font-medium text-slate-500">RASD</div>
             <div className="mt-0.5 text-sm font-bold text-slate-900">
-              Approfondita
+              Conforme
             </div>
           </div>
           <div className="rounded-xl border border-blue-200/60 bg-blue-50 p-3 text-center">
-            <div className="text-xs font-semibold text-blue-700">Metodo</div>
+            <div className="text-xs font-semibold text-blue-700">Gestione</div>
             <div className="mt-0.5 text-sm font-bold text-slate-900">
-              Strutturato
+              Strutturata
             </div>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-3 text-center">
-            <div className="text-xs font-medium text-slate-500">Risultato</div>
+            <div className="text-xs font-medium text-slate-500">Bandi</div>
             <div className="mt-0.5 text-sm font-bold text-sky-600">
-              Concreto
+              Aggiornati
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@ function VisualAstratto() {
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-emerald-400" />
           <span className="text-xs font-semibold text-slate-900">
-            Percorso personalizzato
+            Sport Management
           </span>
         </div>
       </div>

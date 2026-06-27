@@ -12,39 +12,39 @@ export const navigazione = {
 
 export const hero = {
   sopraTitolo: "Consulenza Sport e Terzo Settore",
-  titolo: "Consulenza Sport e Terzo Settore per enti, associazioni e società sportive.",
+  titolo: "Consulenza Sport Management per ASD, SSD ed enti del Terzo Settore.",
   sottotitolo:
-    "Supporto professionale per ASD, SSD ed Enti del Terzo Settore nella gestione normativa, organizzativa e strategica. Un approccio concreto per trasformare dubbi, adempimenti e criticità in soluzioni chiare.",
+    "Normativa, RASD, gestione associativa, bandi e sviluppo organizzativo: un supporto concreto per trasformare dubbi, adempimenti e criticità in decisioni chiare.",
   ctaPrimaria: "Richiedi un confronto",
   ctaSecondaria: "Scopri il metodo",
   microPunti: [
-    "Normativa sportiva",
-    "Gestione associativa",
-    "Sviluppo enti sportivi",
+    "RASD e adempimenti",
+    "Gestione ASD/SSD",
+    "Bandi e sviluppo",
   ],
 };
 
 export const problemaSoluzione = {
   sezione: "Punto di partenza",
-  titoloPrincipale: "Quando la gestione diventa complessa, serve metodo.",
+  titoloPrincipale: "Dalla confusione gestionale a un percorso chiaro.",
   problema: {
     titolo: "Il problema",
     testo:
-      "Molte associazioni e società sportive affrontano ogni giorno dubbi su normative, RASD, verbali, responsabilità, bandi, attività commerciali, volontari, adempimenti e gestione interna. Spesso il problema non è la mancanza di impegno, ma l'assenza di una guida chiara.",
+      "RASD non aggiornato, verbali poco chiari, attività commerciali gestite senza piena consapevolezza, bandi persi, volontari inquadrati male, responsabilità poco definite: molte realtà sportive lavorano ogni giorno con dubbi che possono trasformarsi in rischi.",
     punti: [
-      "Difficoltà a vedere l'intera situazione",
-      "Decisioni frammentate senza un filo conduttore",
-      "Mancanza di un percorso definito e misurabile",
+      "Adempimenti gestiti senza una visione completa",
+      "Errori formali che possono creare problemi concreti",
+      "Opportunità perse per mancanza di metodo",
     ],
   },
   soluzione: {
     titolo: "La soluzione",
     testo:
-      "Un percorso consulenziale permette di analizzare la situazione reale dell'ente, individuare errori o aree di rischio e costruire soluzioni operative, sostenibili e coerenti con gli obiettivi dell'organizzazione.",
+      "Il lavoro di consulenza serve a leggere la situazione reale dell'ente, individuare criticità e priorità, e costruire un piano d'azione pratico per gestire con più ordine normativa, organizzazione e sviluppo.",
     punti: [
-      "Analisi approfondita della situazione reale",
-      "Priorità definite con metodo e rigore",
-      "Piano d'azione chiaro, concreto e monitorabile",
+      "Analisi della situazione reale dell'ente",
+      "Priorità operative definite con metodo",
+      "Indicazioni concrete per procedere con più sicurezza",
     ],
   },
 };

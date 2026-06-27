@@ -3,22 +3,33 @@ import { profilo } from "../../dati/contenutiHome";
 
 function FotoProfilo() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/70"
+    <div className="relative w-full overflow-hidden rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/70"
       style={{ aspectRatio: "4/5" }}
     >
       {/* Foto */}
       <img
         src="/immagini/enrico-di-prisco.jpg"
         alt="Enrico Di Prisco — Consulente Sport e Terzo Settore"
-        className="h-full w-full object-cover object-[center_20%]"
+        className="h-full w-full object-cover object-top"
         loading="lazy"
       />
-      {/* Overlay leggero navy per armonizzare con la palette */}
+      {/* Overlay navy — più marcato in basso per leggibilità badge */}
       <div
         className="pointer-events-none absolute inset-0 rounded-2xl"
-        style={{ background: "linear-gradient(to bottom, rgba(15,23,42,0.04) 0%, rgba(15,23,42,0.18) 100%)" }}
+        style={{ background: "linear-gradient(to bottom, rgba(15,23,42,0.03) 0%, rgba(15,23,42,0.12) 55%, rgba(15,23,42,0.72) 100%)" }}
         aria-hidden="true"
       />
+      {/* Badge istituzionale */}
+      <div className="absolute bottom-0 left-0 right-0 px-4 pb-4">
+        <div className="rounded-xl border border-white/15 bg-slate-900/80 px-4 py-3 backdrop-blur-sm">
+          <p className="text-xs font-bold leading-snug text-white">
+            Dirigente Nazionale OPES / OPES Danza
+          </p>
+          <p className="mt-0.5 text-xs font-medium text-slate-300">
+            Economia &amp; Sport Management
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
