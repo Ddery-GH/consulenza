@@ -376,7 +376,7 @@ export default function HeroPrincipale() {
                 <img
                   src="/immagini/enrico-badge.jpg"
                   alt="Enrico Di Prisco"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-cover object-center"
                   loading="eager"
                 />
               </div>
