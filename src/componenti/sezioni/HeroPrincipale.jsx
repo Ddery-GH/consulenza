@@ -309,7 +309,7 @@ export default function HeroPrincipale() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
 
           {/* ── Colonna sinistra: testo ── */}
           <div className="flex flex-col items-start gap-6">
@@ -350,43 +350,16 @@ export default function HeroPrincipale() {
               </a>
             </div>
 
-            {/* Blocco identità — mini-card profilo + chip autorevolezza */}
-            <div className="flex flex-col gap-3 border-t border-slate-100 pt-5">
-
-              {/* Mini-card profilo */}
-              <div className="inline-flex items-center gap-3 self-start rounded-xl border border-slate-200 bg-white px-4 py-2.5 shadow-sm">
-                <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full border border-slate-200 ring-2 ring-blue-100 shadow-sm">
-                  <img
-                    src="/immagini/enrico-badge.jpg"
-                    alt="Enrico Di Prisco"
-                    className="h-full w-full object-cover object-center"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-sm font-bold leading-snug text-slate-900">
-                    Enrico Di Prisco
-                  </span>
-                  <span className="text-xs leading-tight text-slate-500">
-                    {profilo.ruolo}
-                  </span>
-                  <span className="text-xs font-semibold leading-tight text-blue-700">
-                    {profilo.sottoRuolo}
-                  </span>
-                </div>
-              </div>
-
-              {/* 4 chip autorevolezza */}
-              <div className="flex flex-wrap gap-2">
-                {hero.chipAutorevolezza.map((chip) => (
-                  <span
-                    key={chip}
-                    className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
-                  >
-                    {chip}
-                  </span>
-                ))}
-              </div>
+            {/* 4 chip autorevolezza */}
+            <div className="flex flex-wrap gap-2">
+              {hero.chipAutorevolezza.map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
+                >
+                  {chip}
+                </span>
+              ))}
             </div>
 
             {/* Micro punti */}
@@ -405,9 +378,28 @@ export default function HeroPrincipale() {
             )}
           </div>
 
-          {/* ── Colonna destra: visual ── */}
-          <div className="relative flex items-center justify-center lg:justify-end">
-            <div className="w-full max-w-lg">
+          {/* ── Colonna destra: profilo + visual ── */}
+          <div className="flex flex-col gap-5">
+
+            {/* Card profilo */}
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="h-[88px] w-[88px] shrink-0 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                <img
+                  src="/immagini/enrico-badge.jpg"
+                  alt="Enrico Di Prisco"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-base font-bold text-slate-900">Enrico Di Prisco</span>
+                <span className="text-sm leading-snug text-slate-500">{profilo.ruolo}</span>
+                <span className="text-sm font-semibold text-blue-700">{profilo.sottoRuolo}</span>
+              </div>
+            </div>
+
+            {/* Visual astratto */}
+            <div className="w-full">
               <VisualAstratto />
             </div>
           </div>
