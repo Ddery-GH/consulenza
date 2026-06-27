@@ -350,18 +350,6 @@ export default function HeroPrincipale() {
               </a>
             </div>
 
-            {/* 4 chip autorevolezza */}
-            <div className="flex flex-wrap gap-2">
-              {hero.chipAutorevolezza.map((chip) => (
-                <span
-                  key={chip}
-                  className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
-                >
-                  {chip}
-                </span>
-              ))}
-            </div>
-
             {/* Micro punti */}
             {hero.microPunti && (
               <div className="flex flex-wrap items-center gap-2 pt-1">
@@ -383,7 +371,7 @@ export default function HeroPrincipale() {
 
             {/* Card profilo */}
             <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <div className="h-[88px] w-[88px] shrink-0 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+              <div className="h-[176px] w-[176px] shrink-0 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                 <img
                   src="/immagini/enrico-badge.jpg"
                   alt="Enrico Di Prisco"
@@ -396,6 +384,18 @@ export default function HeroPrincipale() {
                 <span className="text-sm leading-snug text-slate-500">{profilo.ruolo}</span>
                 <span className="text-sm font-semibold text-blue-700">{profilo.sottoRuolo}</span>
               </div>
+            </div>
+
+            {/* 4 chip autorevolezza */}
+            <div className="flex flex-wrap gap-2">
+              {hero.chipAutorevolezza.map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
+                >
+                  {chip}
+                </span>
+              ))}
             </div>
 
             {/* Visual astratto */}
