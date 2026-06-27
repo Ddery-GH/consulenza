@@ -22,6 +22,12 @@ export const hero = {
     "Gestione ASD/SSD",
     "Bandi e sviluppo",
   ],
+  chipAutorevolezza: [
+    "Dirigente Nazionale OPES",
+    "Sport Management",
+    "Consulenza ASD / SSD",
+    "Terzo Settore",
+  ],
 };
 
 export const problemaSoluzione = {

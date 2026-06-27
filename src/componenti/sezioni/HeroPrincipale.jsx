@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { hero } from "../../dati/contenutiHome";
+import { hero, profilo } from "../../dati/contenutiHome";
 
 function VisualAstratto() {
   return (
@@ -348,6 +348,45 @@ export default function HeroPrincipale() {
                 {hero.ctaSecondaria}
                 <ChevronDown size={16} className="text-slate-500" />
               </a>
+            </div>
+
+            {/* Blocco identità — mini-card profilo + chip autorevolezza */}
+            <div className="flex flex-col gap-3 border-t border-slate-100 pt-5">
+
+              {/* Mini-card profilo */}
+              <div className="inline-flex items-center gap-3 self-start rounded-xl border border-slate-200 bg-white px-4 py-2.5 shadow-sm">
+                <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full border border-slate-200 ring-2 ring-blue-100 shadow-sm">
+                  <img
+                    src="/immagini/enrico-badge.jpg"
+                    alt="Enrico Di Prisco"
+                    className="h-full w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-sm font-bold leading-snug text-slate-900">
+                    Enrico Di Prisco
+                  </span>
+                  <span className="text-xs leading-tight text-slate-500">
+                    {profilo.ruolo}
+                  </span>
+                  <span className="text-xs font-semibold leading-tight text-blue-700">
+                    {profilo.sottoRuolo}
+                  </span>
+                </div>
+              </div>
+
+              {/* 4 chip autorevolezza */}
+              <div className="flex flex-wrap gap-2">
+                {hero.chipAutorevolezza.map((chip) => (
+                  <span
+                    key={chip}
+                    className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {/* Micro punti */}
