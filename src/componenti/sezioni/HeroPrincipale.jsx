@@ -349,6 +349,21 @@ export default function HeroPrincipale() {
                 <ChevronDown size={16} className="text-slate-500" />
               </a>
             </div>
+
+            {/* Micro punti */}
+            {hero.microPunti && (
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                {hero.microPunti.map((punto) => (
+                  <span
+                    key={punto}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-500"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-600" aria-hidden="true" />
+                    {punto}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* ── Colonna destra: visual ── */}

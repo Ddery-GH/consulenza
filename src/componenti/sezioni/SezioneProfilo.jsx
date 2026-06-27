@@ -1,45 +1,30 @@
 import { Check } from "lucide-react";
 import { profilo } from "../../dati/contenutiHome";
 
-function PlaceholderFoto() {
+function FotoProfilo() {
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-slate-100">
-
-      {/* Elementi geometrici decorativi di sfondo */}
+    <div className="relative h-full w-full overflow-hidden rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/70"
+      style={{ aspectRatio: "4/5" }}
+    >
+      {/* Foto */}
+      <img
+        src="/immagini/enrico-di-prisco.jpg"
+        alt="Enrico Di Prisco — Consulente Sport e Terzo Settore"
+        className="h-full w-full object-cover object-[center_20%]"
+        loading="lazy"
+      />
+      {/* Overlay leggero navy per armonizzare con la palette */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 rounded-2xl"
+        style={{ background: "linear-gradient(to bottom, rgba(15,23,42,0.04) 0%, rgba(15,23,42,0.18) 100%)" }}
         aria-hidden="true"
-      >
-        <div className="absolute right-0 top-0 h-48 w-48 rounded-bl-full bg-blue-50/60" />
-        <div className="absolute bottom-0 left-0 h-40 w-40 rounded-tr-full bg-slate-200/40" />
-        <div className="absolute left-10 top-10 h-20 w-20 rounded-full border border-slate-200" />
-        <div className="absolute bottom-12 right-10 h-28 w-28 rounded-full border border-blue-100" />
-        <div className="absolute bottom-6 right-6 h-14 w-14 rounded-full bg-blue-50/80" />
-      </div>
-
-      {/* Silhouette placeholder */}
-      <div className="relative z-10 flex flex-col items-center gap-4">
-        <div className="flex h-28 w-28 items-center justify-center rounded-full bg-slate-300/70 shadow-inner">
-          <svg
-            viewBox="0 0 56 56"
-            className="h-16 w-16 text-slate-400"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <circle cx="28" cy="18" r="11" />
-            <path d="M4 52c0-13.255 10.745-24 24-24s24 10.745 24 24" />
-          </svg>
-        </div>
-        <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs font-medium tracking-wide text-slate-400">
-          Foto professionale
-        </span>
-      </div>
+      />
     </div>
   );
 }
 
 export default function SezioneProfilo() {
-  const { sezione, titolo, ruolo, testo, secondoTesto, valori } = profilo;
+  const { sezione, titolo, ruolo, sottoRuolo, testo, secondoTesto, valori } = profilo;
 
   return (
     <section id="profilo" className="bg-white py-20 lg:py-28">
@@ -59,8 +44,8 @@ export default function SezioneProfilo() {
                 aria-hidden="true"
               />
               {/* Frame foto */}
-              <div className="relative h-80 w-full lg:h-[440px]">
-                <PlaceholderFoto />
+              <div className="relative w-full lg:max-w-[400px]">
+                <FotoProfilo />
               </div>
             </div>
           </div>
@@ -77,6 +62,9 @@ export default function SezioneProfilo() {
               </h2>
               <span className="text-base font-semibold text-blue-700">
                 {ruolo}
+              </span>
+              <span className="text-sm font-medium text-slate-500">
+                {sottoRuolo}
               </span>
             </div>
 

@@ -11,20 +11,26 @@ export const navigazione = {
 };
 
 export const hero = {
-  sopraTitolo: "Consulenza professionale",
-  titolo: "Chiarezza nelle situazioni complesse",
+  sopraTitolo: "Consulenza Sport e Terzo Settore",
+  titolo: "Consulenza Sport e Terzo Settore per enti, associazioni e società sportive.",
   sottotitolo:
-    "Analizzo il problema, individuo le priorità e costruisco un percorso concreto verso la soluzione. Senza approssimazioni.",
+    "Supporto professionale per ASD, SSD ed Enti del Terzo Settore nella gestione normativa, organizzativa e strategica. Un approccio concreto per trasformare dubbi, adempimenti e criticità in soluzioni chiare.",
   ctaPrimaria: "Richiedi un confronto",
   ctaSecondaria: "Scopri il metodo",
+  microPunti: [
+    "Normativa sportiva",
+    "Gestione associativa",
+    "Sviluppo enti sportivi",
+  ],
 };
 
 export const problemaSoluzione = {
   sezione: "Punto di partenza",
+  titoloPrincipale: "Quando la gestione diventa complessa, serve metodo.",
   problema: {
     titolo: "Il problema",
     testo:
-      "Molte situazioni difficili non nascono da mancanza di risorse o capacità. Nascono da confusione, da decisioni prese senza una visione chiara, da assenza di metodo. Il risultato è una sensazione di blocco, energia dispersa e risultati che non arrivano.",
+      "Molte associazioni e società sportive affrontano ogni giorno dubbi su normative, RASD, verbali, responsabilità, bandi, attività commerciali, volontari, adempimenti e gestione interna. Spesso il problema non è la mancanza di impegno, ma l'assenza di una guida chiara.",
     punti: [
       "Difficoltà a vedere l'intera situazione",
       "Decisioni frammentate senza un filo conduttore",
@@ -34,7 +40,7 @@ export const problemaSoluzione = {
   soluzione: {
     titolo: "La soluzione",
     testo:
-      "Un confronto strutturato con chi sa ascoltare, analizzare e ordinare. Il percorso consulenziale non è un insieme di risposte preconfezionate, ma un processo guidato che trasforma complessità in chiarezza e chiarezza in azione concreta.",
+      "Un percorso consulenziale permette di analizzare la situazione reale dell'ente, individuare errori o aree di rischio e costruire soluzioni operative, sostenibili e coerenti con gli obiettivi dell'organizzazione.",
     punti: [
       "Analisi approfondita della situazione reale",
       "Priorità definite con metodo e rigore",
@@ -45,115 +51,116 @@ export const problemaSoluzione = {
 
 export const metodo = {
   sezione: "Il metodo",
-  titolo: "Un approccio strutturato in tre fasi",
+  titolo: "Il metodo di Enrico",
   sottotitolo:
-    "Non si parte mai dalla soluzione. Si parte dall'ascolto, poi si analizza, poi si costruisce.",
+    "Analisi, normativa e visione gestionale al servizio di chi opera nel mondo sportivo e associativo.",
   pilastri: [
     {
       numero: "01",
       titolo: "Analisi",
       descrizione:
-        "Ogni percorso inizia con una lettura attenta della situazione. Nessuna ipotesi preventiva, nessuna soluzione prestabilita. Prima di tutto: capire.",
+        "Lettura della situazione dell'ente, delle criticità organizzative e degli aspetti normativi da chiarire.",
     },
     {
       numero: "02",
       titolo: "Strategia",
       descrizione:
-        "Dopo l'analisi emerge una visione. Le priorità vengono ordinate, le variabili valutate. Si costruisce un quadro strategico chiaro e coerente.",
+        "Definizione di un percorso coerente con struttura, responsabilità, obiettivi e sviluppo dell'organizzazione.",
     },
     {
       numero: "03",
       titolo: "Soluzione",
       descrizione:
-        "Il piano diventa azione. Ogni passo è concreto, misurabile e orientato al risultato. L'accompagnamento non finisce con la consegna.",
+        "Indicazioni concrete, strumenti operativi e priorità chiare per migliorare gestione, comunicazione e sicurezza dell'ente.",
     },
   ],
 };
 
 export const ambiti = {
-  sezione: "Ambiti",
-  titolo: "Aree di intervento consulenziale",
-  sottotitolo: "Ogni situazione è diversa. L'approccio è sempre personalizzato.",
+  sezione: "Soluzioni",
+  titolo: "Soluzioni per il mondo sportivo e associativo",
+  sottotitolo: "Un supporto pensato per ASD, SSD, Enti Sportivi e realtà del Terzo Settore.",
   card: [
     {
-      titolo: "Analisi organizzativa",
+      titolo: "Normativa sportiva",
       descrizione:
-        "Lettura della struttura, dei processi e delle dinamiche interne per identificare le aree di inefficienza e le leve di miglioramento.",
+        "Supporto nella lettura degli obblighi e delle regole che riguardano associazioni, società sportive ed enti affiliati.",
     },
     {
-      titolo: "Decisioni strategiche",
+      titolo: "Gestione ASD e SSD",
       descrizione:
-        "Supporto nelle fasi di scelta che impattano sul futuro. Chiarezza sulle opzioni, analisi dei rischi, orientamento verso la direzione più solida.",
+        "Consulenza su processi interni, verbali, organizzazione, ruoli, responsabilità e corretto funzionamento dell'ente.",
     },
     {
-      titolo: "Gestione della complessità",
+      titolo: "RASD e adempimenti",
       descrizione:
-        "Intervento nelle situazioni ad alta complessità che richiedono metodo, lucidità e capacità di tenere insieme più variabili contemporaneamente.",
+        "Orientamento sulle principali criticità operative legate a registri, comunicazioni, documentazione e gestione amministrativa.",
     },
     {
-      titolo: "Pianificazione e percorsi",
+      titolo: "Sviluppo e opportunità",
       descrizione:
-        "Costruzione di piani strutturati, roadmap operative e percorsi di sviluppo chiari, con obiettivi definiti e tappe verificabili.",
+        "Percorsi per migliorare progettualità, bandi, servizio civile, comunicazione e crescita dell'organizzazione sportiva.",
     },
   ],
 };
 
 export const profilo = {
   sezione: "Profilo",
-  titolo: "Enrico Di Prisco",
-  ruolo: "Consulente e analista",
+  titolo: "Una guida per chi opera nello sport e nel Terzo Settore",
+  ruolo: "Dirigente Nazionale OPES / OPES Danza",
+  sottoRuolo: "Economia & Sport Management",
   testo:
-    "Mi occupo di situazioni complesse che richiedono analisi rigorosa, visione chiara e capacità di costruire soluzioni concrete. Il mio lavoro non si limita a rispondere a domande: aiuta a formulare le domande giuste.",
+    "Enrico Di Prisco unisce esperienza dirigenziale, Economia & Sport Management e conoscenza del sistema associativo per affiancare enti sportivi, ASD, SSD e realtà del Terzo Settore in percorsi di consulenza, normativa, gestione e sviluppo.",
   secondoTesto:
-    "Lavoro con chi deve affrontare sfide importanti e cerca un interlocutore affidabile, metodico e diretto. Non offro formule preconfezionate. Offro un metodo.",
+    "Il suo approccio nasce dalla capacità di comunicare in modo chiaro anche temi complessi, aiutando le organizzazioni a riconoscere errori, prevenire criticità e individuare soluzioni concrete.",
   valori: [
-    "Rigore analitico",
-    "Comunicazione diretta",
-    "Orientamento al risultato",
-    "Riservatezza professionale",
+    "Normativa sportiva",
+    "Gestione associativa",
+    "Sviluppo enti sportivi",
+    "Terzo Settore",
   ],
 };
 
 export const percorso = {
   sezione: "Percorso",
-  titolo: "Come funziona il percorso",
+  titolo: "Dal dubbio alla soluzione",
   sottotitolo: "Tre fasi chiare, senza complicazioni inutili.",
   step: [
     {
       numero: "1",
       titolo: "Primo confronto",
       descrizione:
-        "Un colloquio iniziale per capire la situazione, le esigenze e gli obiettivi. Nessun impegno. Solo ascolto e prime valutazioni.",
+        "Ascolto delle esigenze, del contesto e delle problematiche principali dell'ente.",
     },
     {
       numero: "2",
       titolo: "Analisi della situazione",
       descrizione:
-        "Approfondimento strutturato della realtà. Raccolta delle informazioni necessarie, identificazione delle criticità e delle opportunità.",
+        "Valutazione delle criticità normative, gestionali e organizzative.",
     },
     {
       numero: "3",
       titolo: "Piano d'azione",
       descrizione:
-        "Restituzione di un quadro chiaro con priorità, direzioni e passi concreti. Il piano è sempre personalizzato e orientato all'azione.",
+        "Definizione di indicazioni operative e soluzioni pratiche per procedere con maggiore chiarezza.",
     },
   ],
 };
 
 export const ctaFinale = {
-  titolo: "Pronto a fare chiarezza?",
+  titolo: "Hai un dubbio sulla gestione della tua associazione o società sportiva?",
   testo:
-    "Se stai affrontando una situazione complessa e hai bisogno di un interlocutore affidabile, possiamo iniziare con un primo confronto senza impegno.",
+    "Richiedi un confronto per analizzare la situazione, individuare le criticità e capire quale percorso può essere più adatto alla tua realtà.",
   cta: "Richiedi un confronto",
 };
 
 export const footer = {
   nome: "Enrico Di Prisco",
-  tagline: "Consulenza. Analisi. Soluzioni.",
+  tagline: "Consulenza Sport e Terzo Settore. Normativa, gestione e sviluppo per ASD, SSD ed Enti Sportivi.",
   colonne: [
     {
       titolo: "Navigazione",
-      voci: ["Metodo", "Soluzioni", "Profilo", "Percorso", "Contatti"],
+      voci: ["Metodo", "Soluzioni", "Profilo", "Contatti"],
     },
     {
       titolo: "Informazioni",

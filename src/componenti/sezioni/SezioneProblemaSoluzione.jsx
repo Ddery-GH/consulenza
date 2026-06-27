@@ -2,7 +2,7 @@ import { XCircle, CheckCircle2 } from "lucide-react";
 import { problemaSoluzione } from "../../dati/contenutiHome";
 
 export default function SezioneProblemaSoluzione() {
-  const { sezione, problema, soluzione } = problemaSoluzione;
+  const { sezione, titoloPrincipale, problema, soluzione } = problemaSoluzione;
 
   return (
     <section id="soluzione" className="bg-slate-50 py-20 lg:py-28">
@@ -13,6 +13,11 @@ export default function SezioneProblemaSoluzione() {
           <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">
             {sezione}
           </span>
+          {titoloPrincipale && (
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
+              {titoloPrincipale}
+            </h2>
+          )}
         </div>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
