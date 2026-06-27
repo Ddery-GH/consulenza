@@ -350,52 +350,40 @@ export default function HeroPrincipale() {
               </a>
             </div>
 
-            {/* Micro punti */}
-            {hero.microPunti && (
-              <div className="flex flex-wrap items-center gap-2 pt-1">
-                {hero.microPunti.map((punto) => (
-                  <span
-                    key={punto}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-500"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue-600" aria-hidden="true" />
-                    {punto}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* ── Colonna destra: profilo + visual ── */}
           <div className="flex flex-col gap-5">
 
-            {/* Card profilo */}
-            <div className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <div className="h-[176px] w-[176px] shrink-0 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+            {/* Card profilo verticale */}
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              {/* Foto full-width */}
+              <div className="h-[260px] w-full overflow-hidden">
                 <img
                   src="/immagini/enrico-badge.jpg"
                   alt="Enrico Di Prisco"
                   className="h-full w-full object-cover object-top"
-                  loading="lazy"
+                  loading="eager"
                 />
               </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-base font-bold text-slate-900">Enrico Di Prisco</span>
-                <span className="text-sm leading-snug text-slate-500">{profilo.ruolo}</span>
-                <span className="text-sm font-semibold text-blue-700">{profilo.sottoRuolo}</span>
+              {/* Nome, ruolo e chip */}
+              <div className="p-4">
+                <div className="mb-3">
+                  <span className="block text-base font-bold text-slate-900">Enrico Di Prisco</span>
+                  <span className="mt-0.5 block text-sm leading-snug text-slate-500">{profilo.ruolo}</span>
+                  <span className="mt-0.5 block text-sm font-semibold text-blue-700">{profilo.sottoRuolo}</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {hero.chipAutorevolezza.map((chip) => (
+                    <span
+                      key={chip}
+                      className="inline-flex items-center rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-600"
+                    >
+                      {chip}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* 4 chip autorevolezza */}
-            <div className="flex flex-wrap gap-2">
-              {hero.chipAutorevolezza.map((chip) => (
-                <span
-                  key={chip}
-                  className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-sm"
-                >
-                  {chip}
-                </span>
-              ))}
             </div>
 
             {/* Visual astratto */}
