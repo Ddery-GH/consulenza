@@ -369,20 +369,20 @@ export default function HeroPrincipale() {
           {/* ── Colonna destra: profilo + visual ── */}
           <div className="flex flex-col gap-5">
 
-            {/* Card profilo verticale */}
-            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-              {/* Foto full-width */}
-              <div className="h-[260px] w-full overflow-hidden">
+            {/* Card profilo orizzontale con foto portrait */}
+            <div className="flex overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              {/* Foto portrait stretta */}
+              <div className="h-[260px] w-[180px] shrink-0 overflow-hidden">
                 <img
                   src="/immagini/enrico-badge.jpg"
                   alt="Enrico Di Prisco"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-[50%_20%]"
                   loading="eager"
                 />
               </div>
-              {/* Nome, ruolo e chip */}
-              <div className="p-4">
-                <div className="mb-3">
+              {/* Info e chip */}
+              <div className="flex flex-col justify-center gap-3 p-5">
+                <div>
                   <span className="block text-base font-bold text-slate-900">Enrico Di Prisco</span>
                   <span className="mt-0.5 block text-sm leading-snug text-slate-500">{profilo.ruolo}</span>
                   <span className="mt-0.5 block text-sm font-semibold text-blue-700">{profilo.sottoRuolo}</span>
