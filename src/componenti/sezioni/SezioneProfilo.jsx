@@ -42,18 +42,9 @@ export default function SezioneProfilo() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
 
-          {/* ── Colonna sinistra: placeholder foto ── */}
+          {/* ── Colonna sinistra: foto ── */}
           <div className="order-2 lg:order-1">
             <div className="relative mx-auto max-w-sm lg:max-w-none">
-              {/* Cornici decorative sfalsate */}
-              <div
-                className="absolute -left-3 -top-3 h-full w-full rounded-2xl border border-blue-100"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute -left-1.5 -top-1.5 h-full w-full rounded-2xl border border-slate-200"
-                aria-hidden="true"
-              />
               {/* Frame foto */}
               <div className="relative w-full lg:max-w-[400px]">
                 <FotoProfilo />
